@@ -1,29 +1,30 @@
-# Tiny React Starter (Vite)
+# Tiny React Starter — Plus Edition
 
-A minimal React + Vite starter you can run locally in seconds.
+Adds a few interesting, reusable pieces on top of the minimal starter:
 
-## Run locally
+- **Router** with pages (Home, Notes)
+- **Global Command Palette** (⌘/Ctrl+K) with fuzzy search (Fuse.js)
+- **Theme toggle** (light/dark) stored persistently
+- **Global state** via Zustand (counter, theme, notes)
+- **Notes**: local-first CRUD with tags & search
+
+## Quick start
 
 ```bash
-# 1) Unzip the folder
-# 2) Open a terminal in the project directory
 npm install
 npm run dev
 ```
 
-Then open the printed local URL in your browser.
+> If you're upgrading your existing tiny starter, copy the `src` folder over
+> and merge `package.json` dependencies, then `npm install`.
 
-## Build for production
+## Keyboard shortcuts
 
-```bash
-npm run build
-npm run preview
-```
+- Open Command Palette: **⌘/Ctrl + K**
+- Close palette: **Esc**
 
-## What's inside
+## Files you might want to read first
 
-- React 18 + Vite
-- One component (`src/App.jsx`) with a tiny counter and a mock "fetch" demo
-- Minimal styling in `src/styles.css`
-
-Feel free to add a router, state manager, or your favorite UI kit.
+- `src/components/CommandPalette.jsx` — core logic for actions + fuzzy search
+- `src/store/useAppStore.js` — persisted global store (Zustand)
+- `src/pages/Notes.jsx` — simple local-first notes app
